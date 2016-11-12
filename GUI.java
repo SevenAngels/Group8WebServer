@@ -18,10 +18,9 @@ import javafx.stage.Stage;
  * <p> Graphical user interface for the Group 8 Web Server Demo application. To use, enter a desired
  * port number and a server name. Afer that, the program will take a few seconds to connect,
  * be patient.Then, in a web browser, go to <code>http://localhost:</code>
- * followed by the port number. This will display the info that the server has received.
- * Refreshing the page will show that the server is now idle. Entering some text into the "send
- * data" field and pressing the button will send the data to the server. Refreshing the page will
- * then display the sent data on the web page. </p>
+ * followed by the port number. This will display the info that the server has received. 
+ * Entering some text into the "send data" field and pressing the button will send the data to the server. 
+ * Refreshing the page will then display the sent data on the web page. </p>
  *
  * <p>
  * ITCS 3166

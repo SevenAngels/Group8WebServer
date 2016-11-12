@@ -78,13 +78,14 @@ class Server implements Runnable {
             output.write(("HTTP/1.1 200 OK\n\n<html><h1>" +
                     "Client request received, server name is " + serverName + ", time is " + time +
                     "</h1></html>").getBytes());
-        } else if (!data.equals("")){
-            output.write(("HTTP/1.1 200 OK\n\nServer: " + serverName).getBytes());
-            output.write(("<html><h2>Client sent data: " + data + "</h2></html>").getBytes());
+        } else if(data.equals("")) {
+            output.write(("HTTP/1.1 200 OK\n\n<html><h1> Server name is " + serverName + ", " +
+                    "server is idle.").getBytes());
         } else {
-            output.write(("<html><h2>Server is idle.</h2></html>").getBytes());
+            output.write(("HTTP/1.1 200 OK\n\n<html><h2>Server: " + serverName + "</h2>").getBytes
+                    ());
+            output.write(("\n<h2>Client sent data: " + data + "</h2></html>").getBytes());
         }
-        data = "";
         output.close();
         input.close();
     }
